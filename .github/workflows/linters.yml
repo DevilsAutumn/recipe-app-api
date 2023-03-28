@@ -18,10 +18,10 @@ jobs:
       - name: Linting
         run: docker-compose run --rm app sh -c "flake8"
 
-  # black:
-  #   runs-on: ubuntu-20.04
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #     - name: black
-  #       uses: psf/black@stable
+  black:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: black
+        uses: psf/black@stable
